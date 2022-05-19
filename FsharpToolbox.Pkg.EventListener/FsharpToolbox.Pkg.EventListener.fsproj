@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>FsharpToolboxPkg.EventListener</AssemblyName>
+    <RootNamespace>FsharpToolboxPkg.EventListener</RootNamespace>
+    <IsPackable>true</IsPackable>
+
+    <!-- SourceLink configuration -->
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Embedded</DebugType>
+    <EmbedAllSources>True</EmbedAllSources>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FsharpToolboxPkg.Logging" Version="2.0.1" />
+    <PackageReference Include="FsharpToolboxPkg.Serialization" Version="2.0.11" />
+    <PackageReference Include="FsharpToolboxPkg.FpUtils" Version="2.0.9" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.10" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.1.10" />
+    <PackageReference Include="NodaTime" Version="3.0.0" />
+    <PackageReference Include="NodaTime.Serialization.JsonNet" Version="3.0.0" />
+    <PackageReference Update="FSharp.Core" Version="4.7.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="ServiceBusQueueConfiguration.fs" />
+    <Compile Include="EventListener.fs" />
+    <Compile Include="Library.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj" />
+    <ProjectReference Include="..\ServiceBus\ServiceBus.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssemblyName>FsharpToolbox.Pkg.Communication.Core</AssemblyName>
+    <RootNamespace>FsharpToolbox.Pkg.Communication.Core</RootNamespace>
+
+    <!-- SourceLink configuration -->
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Embedded</DebugType>
+    <EmbedAllSources>True</EmbedAllSources>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FsharpToolbox.Pkg.AspNetCore.Core" Version="1.0.0" />
+    <PackageReference Include="FsharpToolbox.Pkg.Common.Core" Version="1.0.0" />
+    <PackageReference Include="FsharpToolbox.Pkg.Common.Result" Version="1.0.0" />
+    <PackageReference Include="FsharpToolbox.Pkg.Serialization" Version="1.0.0" />
+  </ItemGroup>
+
+</Project>
